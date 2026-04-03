@@ -1,7 +1,12 @@
 // ── Navbar scroll
 const navbar = document.getElementById('navbar');
+let lastScroll = 0;
 window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 60);
+    const currentScroll = window.scrollY;
+    navbar.classList.toggle('scrolled', currentScroll > 60);
+    navbar.classList.toggle('scroll-down', currentScroll > lastScroll && currentScroll > 300);
+    navbar.classList.toggle('scroll-up', currentScroll < lastScroll);
+    lastScroll = currentScroll;
 });
 
 // ── Reveal on scroll
