@@ -17,7 +17,6 @@ body {
     color: #e8e3d8;
     font-family: 'DM Sans', sans-serif;
     font-weight: 300;
-    cursor: none;
 }
 
 /* ── CUSTOM CURSOR ── */
@@ -113,8 +112,8 @@ body {
     inset: 0;
     background: linear-gradient(
         to bottom,
-        rgba(10,10,10,0.1) 0%,
-        rgba(10,10,10,0.3) 60%,
+        rgba(10,10,10,0) 0%,
+        rgba(10,10,10,0.02) 60%,
         rgba(10,10,10,1) 100%
     );
 }
@@ -327,10 +326,39 @@ section { padding: 8rem 0; }
 }
 
 /* ── PROYECTOS ── */
-#proyectos { background: var(--dark-3); }
+#proyectos { 
+    background: var(--dark-3); 
+    position: relative;
+    overflow: hidden;
+}
+
+.video-bg-proyectos {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.video-bg-proyectos video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6) saturate(0.8);
+}
+
+.video-overlay-proyectos {
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 26, 26, 0.6);
+}
+
+#proyectos .container {
+    position: relative;
+    z-index: 1;
+}
 .project-card {
     background: var(--dark-2);
     border: 1px solid var(--border);
+    border-radius: 12px;
     overflow: hidden;
     transition: all 0.4s;
 }
@@ -382,7 +410,6 @@ section { padding: 8rem 0; }
     padding: 0.7rem 1.8rem;
     text-decoration: none;
     transition: all 0.3s;
-    cursor: none;
 }
 .btn-view:hover { background: var(--gold); color: var(--dark); }
 .project-body { padding: 1.8rem; }
@@ -423,7 +450,35 @@ section { padding: 8rem 0; }
 }
 
 /* ── CONTACTO ── */
-#contacto { background: var(--dark-2); }
+#contacto { 
+    background: var(--dark-2); 
+    position: relative;
+    overflow: hidden;
+}
+
+.video-bg-contact {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.video-bg-contact video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4) saturate(0.8);
+}
+
+.video-overlay-contact {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 10, 10, 0.6);
+}
+
+#contacto .container {
+    position: relative;
+    z-index: 1;
+}
 .contact-big {
     font-family: 'Clash Display', serif;
     font-size: clamp(3rem, 7vw, 6rem);
@@ -479,7 +534,6 @@ section { padding: 8rem 0; }
     text-decoration: none;
     display: inline-block;
     transition: all 0.3s;
-    cursor: none;
 }
 .btn-gold:hover {
     background: var(--gold-light);
@@ -497,7 +551,6 @@ section { padding: 8rem 0; }
     text-decoration: none;
     display: inline-block;
     transition: all 0.3s;
-    cursor: none;
     margin-left: 1rem;
 }
 .btn-outline-gold:hover {
@@ -522,8 +575,22 @@ footer {
     font-size: 0.72rem;
     letter-spacing: 0.1em;
     color: var(--text-muted);
-    text-align: center;
-    width: 100%;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social-icon {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-social-icon:hover {
+    color: var(--gold);
+    transform: translateY(-3px);
 }
 
 /* ── REVEAL ANIMATION ── */
@@ -596,4 +663,39 @@ footer {
 .project-card:hover .tech-icon {
     filter: grayscale(0) brightness(1);
     transform: translateY(-2px);
+}
+
+/* ── FOTO DE PERFIL ── */
+.profile-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    filter: grayscale(15%);
+    transition: filter 0.4s, transform 0.4s;
+}
+
+.profile-img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}
+
+.profile-img-container-mobile {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img-container-mobile .profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
 }
