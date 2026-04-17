@@ -286,9 +286,9 @@ section { padding: 8rem 0; }
 
 /* ── SKILLS ── */
 #habilidades { 
-    background: var(--dark); 
+    background: var(--dark);
     position: relative;
-    overflow: hidden;
+    min-height: 100vh;
 }
 
 .video-bg-habilidades {
@@ -366,9 +366,9 @@ section { padding: 8rem 0; }
 
 /* ── PROYECTOS ── */
 #proyectos { 
-    background: var(--dark-3); 
+    background: var(--dark-3);
     position: relative;
-    overflow: hidden;
+    min-height: 100vh;
 }
 
 .video-bg-proyectos {
@@ -493,6 +493,8 @@ section { padding: 8rem 0; }
     background: var(--dark-2); 
     position: relative;
     overflow: hidden;
+    min-height: auto;
+    padding: 100px 0;
 }
 
 .video-bg-contact {
@@ -569,6 +571,7 @@ section { padding: 8rem 0; }
     color: var(--dark);
     background: var(--gold);
     border: none;
+    border-radius: 50px;
     padding: 1rem 2.8rem;
     text-decoration: none;
     display: inline-block;
@@ -586,6 +589,7 @@ section { padding: 8rem 0; }
     color: var(--gold);
     background: transparent;
     border: 1px solid var(--gold);
+    border-radius: 50px;
     padding: 1rem 2.8rem;
     text-decoration: none;
     display: inline-block;
@@ -653,7 +657,20 @@ footer {
     .nav-links { gap: 1.5rem; }
     section { padding: 5rem 0; }
     .about-number { font-size: 5rem; }
-    .btn-outline-gold { margin-left: 0; margin-top: 0.8rem; }
+    .hero-buttons-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    .hero-buttons-mobile .btn-outline-gold { margin-left: 0; margin-top: 0; }
+    .contact-buttons-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    .contact-buttons-mobile .btn-outline-gold { margin-left: 0; margin-top: 0; }
     footer .container {
         flex-direction: column;
         justify-content: center;
@@ -743,3 +760,4 @@ footer {
     border-radius: 50%;
     border: 2px solid var(--gold);
 }
+
