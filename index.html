@@ -42,7 +42,8 @@
                     Carlos<br>
                     <em>Martin</em>
                 </h1>
-                <p class="hero-subtitle">Desarrollador Web &nbsp;·&nbsp; Lima, Perú</p>
+                <p class="hero-subtitle">Desarrollador Web <br class="d-lg-none">· <span class="d-none d-lg-inline">Lima, Perú</span></p>
+                    <p class="hero-subtitle hero-location d-lg-none">Lima, Perú</p>
             </div>
             <a href="#sobre-mi" class="hero-scroll">
             </a>
@@ -58,26 +59,48 @@
                     <div class="gold-line"></div>
                     <p class="about-text">
                         Soy <strong>Carlos Martin</strong>, practicante de la carrera de Desarrollo de Software con pasión por el
-                        <strong>desarrollo de paginas web</strong> y de implementar experiencias digitales que combinen <strong>funcionalidad impecable</strong> junto con el buen diseño. Cada proyecto es una oportunidad de resolver problemas reales
+                        <strong>desarrollo de paginas web</strong> y de implementar experiencias digitales que combinen <strong>funcionalidad impeccable</strong> junto con el buen diseño. Cada proyecto es una oportunidad de resolver problemas reales
                         con soluciones elegantes.
                     </p>
-                    <div class="d-lg-none mt-4">
-                        <div class="profile-img-container-mobile">
-                            <img src="./assets/img/perfil.webp" alt="Foto de perfil" class="profile-img">
-                        </div>
-                        <div class="mt-4 text-center hero-buttons-mobile">
-                            <a href="#contacto" class="btn-gold">Hablemos</a>
-                            <a href="#proyectos" class="btn-outline-gold">Ver proyectos</a>
-                        </div>
-                    </div>
-                    <div class="d-none d-lg-block mt-4">
+                    <div class="sobre-mi-buttons mt-4 d-none d-lg-flex">
                         <a href="#contacto" class="btn-gold">Hablemos</a>
                         <a href="#proyectos" class="btn-outline-gold">Ver proyectos</a>
                     </div>
                 </div>
-                <div class="col-lg-6 offset-lg-1 d-none d-lg-block">
-                    <div class="profile-img-container reveal">
-                        <img src="./assets/img/perfil.webp" alt="Foto de perfil" class="profile-img">
+                <div class="col-lg-6 offset-lg-1">
+                    <div class="brand-illustration reveal">
+                        <div class="code-window">
+                            <div class="code-header">
+                                <div class="code-dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <span class="code-title">developer.js</span>
+                            </div>
+                            <div class="code-body">
+                                <div class="code-line line-1"><span class="keyword">const</span> <span class="variable">dev</span> = {</div>
+                                <div class="code-line line-2"><span class="property">nombre</span>: <span class="string">"Carlos Martin"</span>,</div>
+                                <div class="code-line line-3"><span class="property">rol</span>: <span class="string">"Desarrollador Web"</span>,</div>
+                                <div class="code-line line-4"><span class="property">ubicacion</span>: <span class="string">"Lima, Peru"</span>,</div>
+                                <div class="code-line line-5"><span class="property">skills</span>: [</div>
+                                <div class="code-line line-6"><span class="string">"HTML"</span>, <span class="string">"CSS"</span>, <span class="string">"JS"</span>,</div>
+                                <div class="code-line line-7"><span class="string">"PHP"</span>, <span class="string">"MySQL"</span></div>
+                                <div class="code-line line-8">],</div>
+                                <div class="code-line line-9"><span class="property">pasatiempo</span>: <span class="string">"Crear soluciones"</span>,</div>
+                                <div class="code-line line-10"><span class="property">disponible</span>: <span class="boolean">true</span></div>
+                                <div class="code-line line-11">}; <span class="cursor">|</span></div>
+                            </div>
+                            <div class="code-tags">
+                                <span class="tag-code">&lt;HTML/&gt;</span>
+                                <span class="tag-code">&lt;CSS/&gt;</span>
+                                <span class="tag-code">&lt;JS/&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sobre-mi-buttons-mobile mt-3 d-lg-none">
+                        <a href="#contacto" class="btn-gold">Hablemos</a>
+                        <a href="#proyectos" class="btn-outline-gold">Ver proyectos</a>
                     </div>
                 </div>
             </div>
@@ -261,7 +284,7 @@
         </div>
         <div class="container">
             <div class="row align-items-center g-5">
-                <div class="col-lg-6 reveal">
+                <div class="col-lg-5 reveal">
                     <p class="section-label">Contacto</p>
                     <h2 class="contact-big">Trabajemos<br><em>juntos</em></h2>
                     <div class="gold-line"></div>
@@ -269,37 +292,26 @@
                         ¿Tienes un proyecto en mente? Me encantaría escucharte.
                         Cuéntame tu idea y juntos la hacemos realidad.
                     </p>
-                    <div class="mt-4 d-flex gap-3 flex-wrap contact-buttons-mobile">
-                        <a href="mailto:carlos.angeles.claudio@gmail.com" class="btn-gold">Enviar mensaje</a>
-                        <a href="./index/pdf/CV Carlos Martin.pdf" download="CV - Carlos Martin" class="btn-outline-gold">Descargar CV <i class="bi bi-download"></i></a>
+                    <div class="contact-quick mt-4">
+                        <a href="https://wa.me/51945331391" target="_blank" rel="noopener" class="btn-gold">WhatsApp <i class="bi bi-whatsapp"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-5 offset-lg-1 reveal reveal-delay-1">
-                    <div class="contact-info-item">
-                        <div class="contact-icon"><i class="bi bi-whatsapp"></i></div>
-                        <div>
-                            <div class="contact-label">WhatsApp</div>
-                            <div class="contact-value">
-                                <a href="https://wa.me/51945331391" target="_blank" rel="noopener">+51 945 331 391</a>
-                            </div>
+                <div class="col-lg-6 offset-lg-1 reveal reveal-delay-1">
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/xpwzgjvq" method="POST">
+                        <div class="mb-4">
+                            <label for="name" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="name" name="name" required placeholder="Tu nombre">
                         </div>
-                    </div>
-                    <div class="contact-info-item">
-                        <div class="contact-icon"><i class="bi bi-envelope"></i></div>
-                        <div>
-                            <div class="contact-label">Email</div>
-                            <div class="contact-value">
-                                <a href="mailto:carlos.angeles.claudio@gmail.com">carlos.angeles.claudio@gmail.com</a>
-                            </div>
+                        <div class="mb-4">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required placeholder="tu@email.com">
                         </div>
-                    </div>
-                    <div class="contact-info-item">
-                        <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
-                        <div>
-                            <div class="contact-label">Ubicación</div>
-                            <div class="contact-value">Lima, Perú</div>
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required placeholder="Cuéntame sobre tu proyecto..."></textarea>
                         </div>
-                    </div>
+                        <button type="submit" class="btn-gold w-100">Enviar mensaje</button>
+                    </form>
                 </div>
             </div>
         </div>
